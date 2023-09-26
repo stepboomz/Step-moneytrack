@@ -23,7 +23,7 @@ class TransactionInputArea extends StatelessWidget {
               16.vSpace,
               InputAreaAmount(textStyle: _textStyle),
               8.vSpace,
-              const Text('for'),
+              const Text('จาก'),
               8.vSpace,
               InputAreaCategory(textStyle: _textStyle),
               8.vSpace,
@@ -164,7 +164,8 @@ class InputAreaCategory extends StatelessWidget {
                 },
               );
             },
-            child: Text(state.category.title, style: textStyle),
+            child: Text('หมวดหมู่ : ${state.category.title}',
+                style: TextStyle(fontSize: 17)),
           );
         }
         return const SizedBox();
@@ -188,13 +189,13 @@ class InputAreaDate extends StatelessWidget {
 
     switch (dayDelta) {
       case 1:
-        return 'Yesterday';
+        return 'เมื่อวาน';
       case 0:
-        return 'Today';
+        return 'วันนี้';
       case -1:
-        return 'Tomorrow';
+        return 'พรุ่งนี้';
       default:
-        return DateFormat('dd MMM yy').format(date);
+        return DateFormat('dd MMM').format(date);
     }
   }
 

@@ -14,7 +14,7 @@ class RecapBalance extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          'This month balance',
+          'ยอดเดือนนี้',
           textAlign: TextAlign.center,
         ),
         Text(

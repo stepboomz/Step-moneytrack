@@ -17,7 +17,7 @@ class RecapCategoryList<T extends Category> extends StatelessWidget {
       return const [
         Padding(
           padding: EdgeInsets.all(16.0),
-          child: Text('No record for any categories this month'),
+          child: Text('ไม่มีบันทึกสำหรับหมวดหมู่ใด ๆ ในเดือนนี้'),
         ),
       ];
     }
@@ -49,7 +49,7 @@ class RecapCategoryList<T extends Category> extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        isIncome ? 'Incomes' : 'Expenses',
+                        isIncome ? 'รายรับ' : 'รายจ่าย',
                         style: _textStyle,
                       ),
                       Text(

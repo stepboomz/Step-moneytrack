@@ -43,8 +43,7 @@ class TransactionFooter extends StatelessWidget {
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
                   )),
-              child: Text(
-                  recordKey == null ? 'Add Transaction' : 'Update Transaction'),
+              child: Text(recordKey == null ? 'เพิ่ม' : 'อัปเดต'),
             ),
           );
         }

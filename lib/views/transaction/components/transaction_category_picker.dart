@@ -31,14 +31,16 @@ class TransactionCategoryPicker extends StatelessWidget {
                     return Colors.transparent;
                   }),
                   dividerColor: Colors.transparent,
-                  labelColor: onContainerGreen,
-                  labelStyle: _textStyle,
-                  unselectedLabelColor: onContainerBlue,
-                  unselectedLabelStyle: _unselectedTextStyle,
                   indicator: const UnderlineTabIndicator(),
-                  tabs: const [
-                    Tab(text: 'Expense'),
-                    Tab(text: 'Income'),
+                  tabs: [
+                    const Tab(
+                      text: 'รายจ่าย',
+                      icon: Icon(Icons.arrow_downward, color: Colors.redAccent),
+                    ),
+                    const Tab(
+                      text: 'รายรับ',
+                      icon: Icon(Icons.arrow_upward, color: onContainerGreen),
+                    ),
                   ],
                 ),
                 body: Padding(

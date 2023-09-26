@@ -30,8 +30,16 @@ class HomeSummaryCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text((state.daily?.income ?? 0).formatted),
-                    Text((state.daily?.expense ?? 0).formatted),
+                    // if ((state.daily?.income ?? 0) != 0)
+                    Text(
+                      'Income: ${(state.daily?.income ?? 0).formatted} ฿',
+                      style: TextStyle(color: Colors.green),
+                    ),
+                    // if ((state.daily?.expense ?? 0) != 0)
+                    Text(
+                      'Expense: ${(state.daily?.expense ?? 0).formatted} ฿',
+                      style: TextStyle(color: Colors.redAccent),
+                    ),
                   ],
                 ),
               ],

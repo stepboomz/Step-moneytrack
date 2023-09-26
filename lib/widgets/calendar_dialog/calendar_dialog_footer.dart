@@ -23,7 +23,7 @@ class CalendarDialogFooter extends StatelessWidget {
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(16.0)),
             )),
-        child: const Text('Change Date'),
+        child: const Text('เปลี่ยนวันที่'),
       ),
     );
   }

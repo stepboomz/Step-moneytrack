@@ -7,10 +7,10 @@ final incomes = <Income>{
 };
 
 final expenses = <Expense>{
-  Expense('Other', 'other'),
-  Expense('Lunch', 'lunch'),
-  Expense('Dinner', 'dinner'),
-  Expense('Breakfast', 'breakfast'),
-  Expense('Laundry', 'laundry'),
-  Expense('Transport', 'transport'),
+  Expense('อื่นๆ', 'other'),
+  Expense('อาหารกลางวัน', 'lunch'),
+  Expense('อาหารเย็น', 'dinner'),
+  Expense('อาหารเช้า', 'breakfast'),
+  Expense('ผงชักฟอก', 'laundry'),
+  Expense('เติมน้ำมัน', 'transport'),
 };

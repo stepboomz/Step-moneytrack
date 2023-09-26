@@ -54,7 +54,7 @@ class HomeTransactionCard extends StatelessWidget {
               motion: const StretchMotion(),
               children: [
                 SlidableAction(
-                  label: 'Delete',
+                  label: 'ลบ',
                   foregroundColor: onContainerRed,
                   backgroundColor: containerRed,
                   onPressed: (context) =>
@@ -83,16 +83,18 @@ class HomeTransactionCard extends StatelessWidget {
                           foregroundImage: AssetImage(
                               'img/${transactions.category.img}.png')),
                       16.hSpace,
-                      Text(transactions.category.toString()),
+                      Text('หมวดหมู่: ${transactions.category.toString()}'),
                       const Spacer(),
-                      Text(transactions.amount.formatted,
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w700,
-                            color: transactions.category is Income
-                                ? onContainerGreen
-                                : onContainerRed,
-                          )),
+                      Text(
+                        '${transactions.category is Income ? '+' : '-'}${transactions.amount.formatted}',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w700,
+                          color: transactions.category is Income
+                              ? onContainerGreen
+                              : onContainerRed,
+                        ),
+                      )
                     ]),
               ),
             ),
