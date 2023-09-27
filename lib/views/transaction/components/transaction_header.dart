@@ -6,6 +6,8 @@ class TransactionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formatter = DateFormat('dd MMMM y', 'th');
+
     return BlocBuilder<TransactionBloc, TransactionState>(
       builder: (context, state) {
         if (state is TransactionLoaded) {
@@ -19,7 +21,7 @@ class TransactionHeader extends StatelessWidget {
                 icon: const Icon(Icons.close),
               ),
               Text(
-                DateFormat('dd MMMM y').format(state.date),
+                formatter.format(state.date),
                 textAlign: TextAlign.left,
                 style: const TextStyle(
                   fontSize: 16.0,

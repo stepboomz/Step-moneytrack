@@ -195,7 +195,7 @@ class InputAreaDate extends StatelessWidget {
       case -1:
         return 'พรุ่งนี้';
       default:
-        return DateFormat('dd MMM').format(date);
+        return DateFormat('dd MMMM', 'th').format(date);
     }
   }
 

@@ -11,6 +11,8 @@ class RecapHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formatter = DateFormat('MMMM y', 'th');
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -21,7 +23,7 @@ class RecapHeader extends StatelessWidget {
           icon: const Icon(Icons.close),
         ),
         Text(
-          DateFormat('MMMM y').format(date),
+          formatter.format(date),
           textAlign: TextAlign.left,
           style: const TextStyle(
             fontSize: 16.0,

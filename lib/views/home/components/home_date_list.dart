@@ -114,7 +114,7 @@ class HomeDateCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  DateFormat('E').format(date),
+                  DateFormat('E', 'th').format(date),
                   style: TextStyle(
                     fontSize: 12.0,
                     fontWeight: fontWeightDay,

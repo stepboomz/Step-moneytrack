@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:stepmoney/services/transaction_service.dart';
 
 import 'constants/color_schemes.g.dart';
@@ -15,14 +16,13 @@ import 'views/home/home_view.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // เรียก initializeDateFormatting ก่อนที่คุณจะใช้ DateFormat
+  await initializeDateFormatting('th_TH', null);
+
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('google_fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);
   });
-
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
 
   await Hive.initFlutter();
 

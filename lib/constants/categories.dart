@@ -4,6 +4,7 @@ final incomes = <Income>{
   Income('อื่นๆ', 'other_income'),
   Income('เงินเดือน', 'salary'),
   Income('ของขวัญ', 'gifts'),
+  Income('ลงทุน', 'invest'),
 };
 
 final expenses = <Expense>{
@@ -12,5 +13,6 @@ final expenses = <Expense>{
   Expense('อาหารเย็น', 'dinner'),
   Expense('อาหารเช้า', 'breakfast'),
   Expense('ผงชักฟอก', 'laundry'),
-  Expense('เติมน้ำมัน', 'transport'),
+  Expense('ขนส่ง', 'transport'),
+  Expense('เติมน้ำมัน', 'refuel'),
 };
